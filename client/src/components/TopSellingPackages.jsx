@@ -11,11 +11,10 @@ import {
 } from "@mui/material";
 
 const TopSellingPackages = () => {
+  const API = import.meta.env.VITE_API_BASE_URL;
 
   const fetchPackages = async () => {
-    const { data } = await axios.get(
-      "http://localhost:5000/api/packages/top-selling"
-    );
+    const { data } = await axios.get(`${API}/api/packages/top-selling`);
     return data;
   };
 
@@ -66,7 +65,13 @@ const TopSellingPackages = () => {
                   image={pkg.image}
                   alt={pkg.title}
                 />
-                <CardContent sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
+                <CardContent
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
+                >
                   <Typography variant="h6" gutterBottom>
                     {pkg.title}
                   </Typography>

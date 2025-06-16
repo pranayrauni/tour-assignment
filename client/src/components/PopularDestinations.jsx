@@ -11,8 +11,11 @@ import {
 } from "@mui/material";
 
 const PopularDestinations = () => {
+
+  const API = import.meta.env.VITE_API_BASE_URL;
+
   const fetchDestinations = async () => {
-    const { data } = await axios.get("http://localhost:5000/api/destinations");
+    const { data } = await axios.get(`${API}/api/destinations`);
     return data;
   };
   const { data, isPending, isError, error } = useQuery({

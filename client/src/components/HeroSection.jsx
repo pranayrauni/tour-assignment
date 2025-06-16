@@ -4,8 +4,11 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 const HeroSection = () => {
+
+  const API = import.meta.env.VITE_API_BASE_URL;
+  
   const fetchHero = async () => {
-    const { data } = await axios.get("http://localhost:5000/api/hero");
+    const { data } = await axios.get(`${API}/api/hero`);
     return data;
   };
 
