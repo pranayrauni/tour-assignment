@@ -16,6 +16,10 @@ app.use(cors());
 app.use(express.json());
 
 const PORT = process.env.PORT || 5000;
+app.get('/ping', (req, res) => {
+    res.send('I am from backend');
+})
+
  
 const mockData = {
   hero: [
