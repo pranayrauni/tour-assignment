@@ -36,7 +36,7 @@ const mockData = {
       name: "Jammu & Kashmir",
       price: "Starting from ₹4999/-",
       image:
-        "https://res.cloudinary.com/dilrbbzkj/image/upload/v1749926070/jk_otyoq6.jpg",
+        "https://res.cloudinary.com/dilrbbzkj/image/upload/w_1000,ar_1:1,c_fill,g_auto,e_art:hokusai/v1749926070/jk_otyoq6.jpg",
     },
     {
       name: "Himachal Pradesh",

@@ -39,7 +39,7 @@ const PopularDestinations = () => {
     return null;
 
   return (
-    <Box my={6}>
+    <Box my={6} px={2}>
       <Typography variant="h4" gutterBottom textAlign="center">
         Explore Most Popular Destinations
       </Typography>
@@ -54,17 +54,17 @@ const PopularDestinations = () => {
         Plan your perfect trip with our most loved and best-selling tour
         packages.
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container  spacing={3}>
         {data.map((dest, i) => (
           <Grid size={4} key={i}>
             <Card>
               <CardMedia
                 component="img"
-                height="140"
+                height="160"
                 image={dest.image}
                 alt={dest.name}
               />
-              <CardContent sx={{display: "flex", justifyContent: "space-between"}}>
+              <CardContent sx={{display: "flex", justifyContent: "space-between", flexWrap: "wrap"}}>
                 <Typography variant="h6">{dest.name}</Typography>
                 <Typography variant="body2" color="text.secondary" py={1}>
                   {dest.price}

@@ -33,7 +33,7 @@ const Advantages = () => {
   ];
   return (
     <>
-      <Box my={6} bgcolor={"aqua"}>
+      <Box my={6} bgcolor={"aqua"} sx={{display: "flex", flexDirection: "column", alignItems: "center"}}>
         <Typography variant="h4" textAlign="center" pt={4} gutterBottom>
           Our Advantages
         </Typography>
@@ -49,10 +49,10 @@ const Advantages = () => {
           Here are other reasons to book tours at Treat Holidays
         </Typography>
 
-        <Grid container spacing={6} padding={10}>
+        <Grid container  padding={5}  spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
           {advantages.map((adv, i) => (
             <Grid size={3} key={i}>
-              <Paper elevation={2} sx={{ py: 6, textAlign: "center" }}>
+              <Paper elevation={2} sx={{ p: 6, height: '10rem', textAlign: "center" }}>
                 <Box mb={2}>{adv.icon}</Box>
                 <Typography variant="h6">{adv.title}</Typography>
                 <Typography variant="body2" color="text.secondary">
